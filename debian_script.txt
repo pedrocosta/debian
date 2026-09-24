@@ -3,4 +3,19 @@
   usermod -aG sudo $USER
   reboot
 
-  
+###
+# script to restart NetworkManager on wake
+###
+
+cat <<EOF >restart-nm-on-wake.service
+[Unit]
+Description=Restart NetworkManager on wake
+After=suspend.target
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart NetworkManager
+[Install]
+WantedBy=suspend.target
+EOF
+sudo mv restart-nm-on-wake.service /etc/systemd/system/
+sudo systemctl enable restart-nm-on-wake.service
