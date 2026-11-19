@@ -3,7 +3,8 @@
 sudo apt full-upgrade --update --autoremove -y
 flatpak upgrade -y
 sudo snap refresh
-sudo determinate-nixd upgrade
+#sudo determinate-nixd upgrade
+sudo /usr/local/bin/determinate-nixd upgrade
 nix profile upgrade --all
 # clean
 nix-collect-garbage -d
