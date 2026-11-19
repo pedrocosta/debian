@@ -73,6 +73,12 @@ chmod +x upgrade.sh
 ./upgrade.sh
 
 ###
+# install tio and mosh
+###
+
+sudo apt install tio mosh
+
+###
 # install podman and podman-compose
 ###
 
