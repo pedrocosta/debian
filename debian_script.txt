@@ -28,7 +28,8 @@ sudo systemctl enable restart-nm-on-wake.service
 ###
 
 sudo nano /etc/apt/sources.list
-# comentar os repositórios atuais e acrescentar os seguintes:
+# alterar todas as ocorrencias de trixie para testing nos repositórios atuais 
+# ou, os aventureiros podem colocar os seguintes:
 
 deb https://ftp.debian.org/debian/ testing contrib main non-free non-free-firmware
 # deb-src https://ftp.debian.org/debian/ testing contrib main non-free non-free-firmware
